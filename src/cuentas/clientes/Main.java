@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         operativa_cuenta(0);
         System.out.println("Este es el primer cambio para Git.");
+        System.out.println("Este es el segundo cambio para Git");
     }
 
     private static void operativa_cuenta(float cantidad) {
