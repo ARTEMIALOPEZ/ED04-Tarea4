@@ -1,3 +1,8 @@
+/**
+ * @author Artemia López Gallego
+ * @version 1.2
+ * @since 13/02/2024
+ */
 package cuentas.clientes;
 
 public class Main {
@@ -7,7 +12,10 @@ public class Main {
         System.out.println("Este es el primer cambio para Git.");
         System.out.println("Este es el segundo cambio para Git");
     }
-
+    
+    /**
+     * @param cantidad 
+     */
     private static void operativa_cuenta(float cantidad) {
         Cuenta cuenta1;
         double saldoActual;

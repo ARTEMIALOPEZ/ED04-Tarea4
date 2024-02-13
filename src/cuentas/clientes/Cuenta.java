@@ -1,58 +1,63 @@
+/**
+ * @author Artemia López Gallego
+ * @version 1.0
+ * @since 13/02/2024
+ */
 package cuentas.clientes;
 
 public class Cuenta {
 
     /**
-     * @return the nombre
+     * @return nombre
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * @param nombre el nombre a guardar
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * @return the cuenta
+     * @return la cuenta
      */
     public String getCuenta() {
         return cuenta;
     }
 
     /**
-     * @param cuenta the cuenta to set
+     * @param cuenta la cuenta a guardar
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
     /**
-     * @return the saldo
+     * @return el saldo
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
-     * @param saldo the saldo to set
+     * @param saldo el saldo a guardar
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInteres
+     * @return el tipoInteres
      */
     public double getTipoInteres() {
         return tipoInteres;
     }
 
     /**
-     * @param tipoInteres the tipoInteres to set
+     * @param tipoInteres el tipoInteres a guardar
      */
     public void setTipoInteres(double tipoInteres) {
         this.tipoInteres = tipoInteres;
@@ -64,6 +69,9 @@ public class Cuenta {
     private double saldo;
     private double tipoInteres;
 
+    /**
+     * Constructor vacío
+     */
     public Cuenta()
     {
         nombre ="";
@@ -72,6 +80,13 @@ public class Cuenta {
         tipoInteres=0;
     }
 
+    /**
+     * Constructor con parámetros
+     * @param nom nombre del titular
+     * @param cue cuenta
+     * @param sal saldo inicial
+     * @param tipo interés
+     */
     public Cuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -80,11 +95,20 @@ public class Cuenta {
         tipoInteres=tipo;
     }
 
+    /**
+     * 
+     * @return saldo actual de una cuenta
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * 
+     * @param cantidad importe a ingresar
+     * @throws Exception en caso de se una cantidad menor a 0
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -92,6 +116,12 @@ public class Cuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * 
+     * @param cantidad importe a retirar
+     * @throws Exception en caso de ser un importe menor o igual a 0 o si es
+     * más del saldo
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
