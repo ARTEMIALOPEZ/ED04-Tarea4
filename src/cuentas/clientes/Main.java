@@ -14,7 +14,8 @@ public class Main {
     }
     
     /**
-     * @param cantidad 
+     * Operativa de una cuenta
+     * @param cantidad con este parámetro no se hace nada
      */
     private static void operativa_cuenta(float cantidad) {
         Cuenta cuenta1;
