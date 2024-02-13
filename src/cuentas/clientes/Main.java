@@ -1,9 +1,9 @@
+package cuentas.clientes;
 /**
  * @author Artemia López Gallego
  * @version 1.2
  * @since 13/02/2024
  */
-package cuentas.clientes;
 
 public class Main {
 
